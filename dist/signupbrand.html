@@ -1,0 +1,136 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet"> 
+
+  </head>
+  <body>
+
+    <form class="form-signup" id="new_influencer" action="<?php echo $base_url.'signup/register'; ?>" data-abide novalidate>
+    	<div class="row" id="title">
+    		<div class="column small-12">
+    
+    				<h2>Register brand</h2>
+    		</div>
+    	</div>
+    
+    	<div class="row" id="input-entry">
+    	<div class="column small-12 large-6">
+    		<div class="input-container" id="firstName">
+    			<label class="required">First Name</label>
+    			<div class="input-group">
+    			  <input class="input-group-field" type="text" name="firstname" required>
+    			  <div class="input-group-button">
+    				<img class="sign-error" src="assets/img/no.png" alt="">
+    			  </div>
+    			</div>
+    		</div>
+    	</div>
+    
+    	<div class="column small-12 large-6">
+    		<div class="input-container" id="lastName">
+    				<label class="required">Last Name</label>
+    				<div class="input-group">
+    				  <input class="input-group-field" type="text" name="lastname" required>
+    				  <div class="input-group-button">
+    				  	<img class="sign-error" src="assets/img/no.png" alt="">
+    				  </div>
+    				</div>
+    		</div>
+    	</div>
+    
+    	<div class="column small-12">		
+    		<div class="input-container" id="username">
+    			<label class="required">Username</label>
+    			<div class="input-group">
+    			  <input class="input-group-field" type="text" name="username" required>
+    			  <div class="input-group-button">
+    			  	<img class="sign-error" src="assets/img/no.png" alt="">
+    			  </div>
+    			</div>
+    			<div class="form-error">The username is already in use.</div>
+    		</div>
+    	</div>
+    
+    	<div class="column small-12">
+    		<div class="input-container" id="mail">
+    			<label class="required">E-mail</label>
+    			<div class="input-group">
+    			  <input class="input-group-field" type="text" name="inputEmail" required pattern="email">
+    			  <div class="input-group-button">
+    			  	<img class="sign-error" src="assets/img/no.png" alt="">
+    			  </div>
+    			</div>
+    			<div class="form-error">The e-mail is already in use.</div>
+    		</div>
+    	</div>
+    
+    	<div class="column small-12">
+    		<div class="input-container" id="pass">
+    			<label class="required">Password</label>
+    			<div class="input-group">
+    			  <input class="input-group-field" name="password" type="password" placeholder="" aria-describedby="exampleHelpText" required pattern="pass">
+    			  <div class="input-group-button">
+    			  	<img class="sign-error" src="assets/img/no.png" alt="">
+    			  </div>
+    			  <p class="help-text">UpperCase, LowerCase, Number/SpecialChar and min 8 Chars</p>
+    			</div>
+    		</div>
+    	</div>
+    
+    	<div class="column small-12">
+    		<div class="input-container">
+    			<label id="checkbox1">I have read, understood, and accepted the <a href="#" title="">PRIVACY POLICY</a> for membership.</label>
+    
+    			<div class="switch tiny">
+    			  <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
+    			  <label class="switch-paddle" for="tinySwitch">
+    			    <span class="show-for-sr">Tiny Sandwiches Enabled</span>
+    			  </label>
+    			</div>
+    		</div>
+    	</div>
+    
+    	<div class="column small-12">
+    		<div class="input-container" id="button" >	
+    			<button class="button primary disabled" type="submit" value="Sign Up" disabled="true">Sign Up</button>
+    		</div>
+    	</div>
+    			
+    	</div>
+    	</div>
+    
+    	<div class="row" id="modal">
+    	<div class="column small-12">
+    		<div class="confirm-mail">
+    			
+    			<header>
+    				<img src="assets/img/send-email.png" alt="send email">
+    				<h3>We've sent a confirmation e-mail to:</h3>
+    			</header>
+    
+    			<section>
+    				<h5><strong><?php echo $session_email; ?></strong></h5>
+    				<p>Please confirm clicking <br>en the e-mail and continue</p>
+    			</section>
+    			
+    			<footer>
+    				<a href="<?php echo $base_url ?>admin/dashboard/checkactivelogin" title="">Continue</a>
+    				<br><br>
+    				<p>Need Help?</p> <a href="mailto:augusto@lemmonet.com" title="">Contact Support</a>
+    			</footer>
+    		</div>
+    	</div>
+    	</div>
+    </form>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
